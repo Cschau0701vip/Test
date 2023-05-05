@@ -2,30 +2,9 @@ import os
 import base64
 import github
 from github import Github
-import chartjs_node_canvas
 
 
 async def main():
-    data = {
-        'labels': ['Passed', 'Failed', 'Others'],
-        'datasets': [{
-            'data': [16, 0, 0],
-            'backgroundColor': ['#4CAF50', '#F44336', '#9E9E9E']
-        }]
-    }
-
-    width = 400
-    height = 400
-    chart_callback = lambda chartjs: chartjs.defaults.global_.update({
-        'responsive': True,
-        'maintainAspectRatio': False
-    })
-    canvas = chartjs_node_canvas.Canvas(width=width, height=height, chart_callback=chart_callback)
-
-    chart = await canvas.render_to_buffer({
-        'type': 'pie',
-        'data': data
-    })
 
     g = Github(os.environ['GITHUB_TOKEN'])
     repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
@@ -36,7 +15,7 @@ async def main():
     path = f'chart/{filename}'
     branch = os.environ['GITHUB_HEAD_REF']
 
-    contents = base64.b64encode(chart.getvalue()).decode()
+    contents = base64.b64encode("Hello")
     try:
         repo.get_contents(path=path, ref=branch)
         message = 'Update chart in pull request'
