@@ -98,4 +98,8 @@ async function main() {
     event: 'COMMENT',
     body: comment
   })
+  console.log(github.context.repo.owner)
+  console.log(github.context.repo.repo)
+  console.log(prNumber)
+  console.log(comment)
 }
