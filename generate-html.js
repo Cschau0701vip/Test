@@ -1,6 +1,6 @@
 const github1 = require('@actions/github');
 const octokit = new github1.GitHub(process.env.GITHUB_TOKEN, {baseUrl: 'https://github.com/api/v3'});
-const artifactUrl = await github1.rest.actions.downloadArtifact({
+const artifactUrl = github1.rest.actions.downloadArtifact({
   artifact_id: null,
   archive_format: 'zip'
 });
