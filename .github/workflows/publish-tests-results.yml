@@ -16,7 +16,7 @@ jobs:
         npm install
 
     - name: Generate HTML
-      run: node generate-html.js
+      run: python publish-tests-results.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
