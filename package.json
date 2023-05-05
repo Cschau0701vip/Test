@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^5.2.0",
+    "@actions/github": "^5.1.1",
     "chart.js": "^2.7.3",
     "chartjs-node-canvas": "^2.1.1",
     "fs": "0.0.1-security"
