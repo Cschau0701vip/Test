@@ -23,12 +23,3 @@ jobs:
       with:
         name: chart
         path: test-summary.html
-
-    - name: Add comment with artifact link
-      uses: unsplash/comment-on-pr@v1
-      with:
-        message: |
-          The chart can be viewed [here](${{ steps.upload.outputs.artifact_url }}).
-          <script>window.open('${{ steps.upload.outputs.artifact_url }}', '_blank')</script>
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
