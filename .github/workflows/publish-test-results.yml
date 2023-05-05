@@ -1,8 +1,7 @@
-name: Generate Chart
+name: Publish Tests
 
 on:
-  pull_request:
-    types: [opened]
+  pull_request
 
 jobs:
   build:
