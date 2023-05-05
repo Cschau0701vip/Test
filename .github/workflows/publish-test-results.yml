@@ -16,7 +16,7 @@ jobs:
         python-version: '3.x'
 
     - name: Install dependencies
-      run: pip install PyGithub
+      run: pip install PyGithub requests
 
     - name: Generate chart
       env:
