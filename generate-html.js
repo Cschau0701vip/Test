@@ -6,7 +6,7 @@ const artifactUrl = github1.rest.actions.downloadArtifact({
 });
 const artifactLink = `[View Test Results](${artifactUrl})`;
 const commentBody = `Test results for this pull request: ${artifactLink}`;
-await github1.rest.issues.createComment({
+github1.rest.issues.createComment({
   issue_number: context.issue.number,
   body: commentBody
 });
