@@ -24,7 +24,7 @@ async function main() {
     data: data
   });
 
-  const octokit = github.getOctokit(${{ secrets.GITHUB_TOKEN }});
+  const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
   const { owner, repo, number } = github.context.issue;
   const filename = 'chart.png';
 
