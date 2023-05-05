@@ -2,7 +2,7 @@ import os
 import base64
 import github
 from github import Github
-
+import requests
 
 async def main():
 
@@ -32,4 +32,5 @@ async def main():
     pull_request.create_review_comment(body=review_comment)
 
 if __name__ == '__main__':
-    main()
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
