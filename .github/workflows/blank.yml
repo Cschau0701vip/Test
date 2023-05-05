@@ -22,7 +22,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: chart
-        path: chart.html
+        path: test-summary.html
 
     - name: Add comment with artifact link
       uses: unsplash/comment-on-pr@v1
