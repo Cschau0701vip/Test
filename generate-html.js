@@ -95,5 +95,6 @@ async function main() {
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
     pull_number: prNumber,
-    event: 'COMMENT',
-   
+    event: 'COMMENT'
+  })
+}
