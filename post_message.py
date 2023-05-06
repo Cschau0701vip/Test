@@ -19,7 +19,7 @@ pull_request = repo.get_pull(pull_request_number)
 
 # Post a message on the pull request
 try:
-    pull_request.create_issue_comment("<your message>")
+    pull_request.create_issue_comment("Hello World From GHA")
     print("Message posted successfully.")
 except GithubException as e:
     print(f"An error occurred: {e}")
