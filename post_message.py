@@ -17,9 +17,25 @@ repo = g.get_repo(f"{owner}/{repo_name}")
 pull_request_number = int(os.environ['PR_NUMBER'])
 pull_request = repo.get_pull(pull_request_number)
 
+# Construct the comment message
+num_tests = 16
+num_passed = 16
+num_failed = 0
+pass_percentage = 100
+
+pass_icon = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="green" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.28 5.53l-3.804 4.094L4.71 8.307a.565.565 0 1 1 .657-.914l2.196 1.245 3.493-3.758a.565.565 0 1 1 .738.847z"/></svg>'
+fail_icon = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="red" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.72 11.53l-3.271-3.27-3.271 3.27a.5.5 0 0 1-.707 0l-1.06-1.06a.5.5 0 0 1 0-.707l3.27-3.271-3.27-3.27a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l3.27 3.271 3.271-3.27a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1 0 .707l-3.27 3.271 3.27 3.27a.5.5 0 0 1 0 .707l-1.06 1.06a.5.5 0 0 1-.707 0z"/></svg>'
+
+pass_icon = f'{pass_icon} Passed: {num_passed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+fail_icon = f'{fail_icon} Failed: {num_failed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+total_tests = f'Total Tests: {num_tests} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+pass_percent = f'Pass Percentage: {pass_percentage}% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+
+message = f'<h2>Test Summary</h2> <p>{pass_icon} {fail_icon} {total_tests} {pass_percent}</p>'
+
 # Post a message on the pull request
 try:
-    pull_request.create_issue_comment("<h2>Summary</h2><p>1 Run(s) Completed (1 Passed, 0 Failed)</p><table><tr><th>Total tests</th><th>Passed</th><th>Failed</th><th>Others</th></tr><tr><td>16</td><td style=\"color: green;\">16</td><td style=\"color: red;\">0</td><td>0</td></tr></table><div style=\"max-width: 400px;\"><canvas id=\"myChart\"></canvas></div><script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script><script>var ctx = document.getElementById('myChart').getContext('2d');var myChart = new Chart(ctx, {type: 'doughnut',data: {labels: ['Passed', 'Failed', 'Others'],datasets: [{data: [16, 0, 0],backgroundColor: ['green','red','gray']}]},options: {maintainAspectRatio: false}});</script><p><strong>Pass percentage:</strong> 100%</p><p><strong>Run duration:</strong> 16m 9s (+16m 9s)</p><p><strong>Tests not reported:</strong> 0</p>")
+    pull_request.create_issue_comment(message)
     print("Message posted successfully.")
 except GithubException as e:
     print(f"An error occurred: {e}")
