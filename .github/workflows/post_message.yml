@@ -21,5 +21,6 @@ jobs:
       - name: Post Message on Pull Request
         env:
           ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
         run: |
           python post_message.py
