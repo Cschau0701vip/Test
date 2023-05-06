@@ -1,34 +1,25 @@
-name: Generate Chart
+name: Post Message on Pull Request
 
-on: pull_request
+on:
+  pull_request
 
 jobs:
-  generate_chart:
+  post_message:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install dependencies
-      run: |
-        sudo apt-get update && sudo apt-get install -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
-        npm install
-
-    - name: Generate HTML
-      run: node generate-html.js
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: chart
-        path: chart.html
-
-    - name: Add comment with artifact link
-      uses: unsplash/comment-on-pr@v1
-      with:
-        message: |
-          The chart can be viewed [here](${{ steps.upload.outputs.artifact_url }}).
-          <script>window.open('${{ steps.upload.outputs.artifact_url }}', '_blank')</script>
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install PyGithub
+        run: pip install PyGithub
+      
+      - name: Post Message on Pull Request
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          python post_message.py
