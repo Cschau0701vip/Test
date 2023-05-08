@@ -16,5 +16,7 @@ jobs:
       uses: Cschau0701vip/Publis-Tests@main
       with:
         artifacts_path: './*.xml'
-        pull_request_number: '${{ github.event.number }}3'
+        pull_request_number: ${{ github.event.number }}
+        gh_token: ${{ secrets.GH_TOKEN }}
+        gh_repo: ${{ github.repository }}
         
