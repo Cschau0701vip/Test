@@ -23,8 +23,20 @@ num_passed = 16
 num_failed = 0
 pass_percentage = 100
 
-pass_icon = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle-fill" fill="green" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.28 5.53l-3.804 4.094L4.71 8.307a.565.565 0 1 1 .657-.914l2.196 1.245 3.493-3.758a.565.565 0 1 1 .738.847z"/></svg>'
-fail_icon = '<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="red" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.72 11.53l-3.271-3.27-3.271 3.27a.5.5 0 0 1-.707 0l-1.06-1.06a.5.5 0 0 1 0-.707l3.27-3.271-3.27-3.27a.5.5 0 0 1 0-.707l1.06-1.06a.5.5 0 0 1 .707 0l3.27 3.271 3.271-3.27a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1 0 .707l-3.27 3.271 3.27 3.27a.5.5 0 0 1 0 .707l-1.06 1.06a.5.5 0 0 1-.707 0z"/></svg>'
+messageBody = f'## UI Tests Summary
+
+**1** Run(s) Completed (${\color{green}1 \ Passed}$, ${\color{red}0 \ Failed}$)
+
+| Total tests | ✅ Passed | ❌ Failed | 🗃️ Others |
+| -----------| ------ | ------ | ------ |
+| $${\color{green}{num_tests}}$$        |  $${\color{green}{num_passed}}$$  | $${\color{red} {num_failed}}$$     | $${\color{green}0}$$      |
+
+✅ Pass percentage: ${\color{green}{pass_percentage} ﹪}$
+
+⏱️ Run duration: ${\color{black} 16m \ 9s}$
+
+👾 Tests not reported:  ${\color{purple} 0 }$
+'
 
 pass_icon = f'{pass_icon} Passed: {num_passed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 fail_icon = f'{fail_icon} Failed: {num_failed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
@@ -35,7 +47,7 @@ message = f'<h2>Test Summary</h2> <p>{pass_icon} {fail_icon} {total_tests} {pass
 
 # Post a message on the pull request
 try:
-    pull_request.create_issue_comment(message)
+    pull_request.create_issue_comment(messageBody)
     print("Message posted successfully.")
 except GithubException as e:
     print(f"An error occurred: {e}")
