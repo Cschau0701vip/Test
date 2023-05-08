@@ -16,5 +16,5 @@ jobs:
       uses: Cschau0701vip/Publis-Tests@main
       with:
         artifacts_path: './*.xml'
-        pull_request_number: ${{ github.event.pull_request.number }}
+        pull_request_number: ${{ github.event.number }}
         
