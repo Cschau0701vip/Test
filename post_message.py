@@ -23,7 +23,14 @@ num_passed = 16
 num_failed = 0
 pass_percentage = 100
 
-messageBody = f'## UI Tests Summary\n\n**1** Run(s) Completed (${{\color{{green}}1 \ Passed}}$, ${{\color{{red}}0 \ Failed}}$)\n\n| Total tests | ✅ Passed | ❌ Failed | 🗃️ Others |\n| -----------| ------ | ------ | ------ |\n| $${{\color{{green}}{num_tests}}}}$$        |  $${{\color{{green}}{num_passed}}}}$$  | $${{\color{{red}} {num_failed}}}}$$     | $${{\color{{green}}0}}}}$$      |\n\n✅ Pass percentage: ${{\color{{green}}{pass_percentage} ﹪}}$\n\n⏱️ Run duration: ${{\color{{black}} 16m \\ 9s}}$\n\n👾 Tests not reported:  ${{\color{{purple}} 0 }}}$'
+messageBody = f'## UI Tests Summary\n\n'
+messageBody += '**1** Run(s) Completed (${{\color{{green}}1 \ Passed}}$, ${{\color{{red}}0 \ Failed}}$)\n\n'
+messageBody += '| Total tests | ✅ Passed | ❌ Failed | 🗃️ Others |\n'
+messageBody += '| -----------| ------ | ------ | ------ |\n'
+messageBody += '| $${{\color{{green}}{num_tests}}}$$        |  $${{\color{{green}}{num_passed}}}$$  | $${{\color{{red}} {num_failed}}}$$     | $${{\color{{green}}0}}}}$$      |\n\n'
+messageBody += '✅ Pass percentage: ${{\color{{green}}{pass_percentage} ﹪}}$\n\n'
+messageBody += '⏱️ Run duration: ${{\color{{black}} 16m \\ 9s}}$\n\n'
+messageBody += '👾 Tests not reported:  ${{\color{{purple}} 0 }}}$'
 
 pass_icon = f'{pass_icon} Passed: {num_passed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
 fail_icon = f'{fail_icon} Failed: {num_failed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
