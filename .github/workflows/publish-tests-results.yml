@@ -13,7 +13,7 @@ jobs:
     - name: Publis-Tests
       uses: Cschau0701vip/Publis-Tests@main
       with:
-        artifacts_path: './*.xml'
+        artifacts_path: './*TEST-*.xml'
         pull_request_number: ${{ github.event.number }}
         gh_token: ${{ secrets.GH_TOKEN }}
         gh_repo: ${{ github.repository }}
