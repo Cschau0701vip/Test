@@ -32,13 +32,6 @@ messageBody += '✅ Pass percentage: ${{\color{{green}}{pass_percentage} ﹪}}$\
 messageBody += '⏱️ Run duration: ${{\color{{black}} 16m \\ 9s}}$\n\n'
 messageBody += '👾 Tests not reported:  ${{\color{{purple}} 0 }}}$'
 
-pass_icon = f'{pass_icon} Passed: {num_passed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-fail_icon = f'{fail_icon} Failed: {num_failed} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-total_tests = f'Total Tests: {num_tests} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-pass_percent = f'Pass Percentage: {pass_percentage}% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
-
-message = f'<h2>Test Summary</h2> <p>{pass_icon} {fail_icon} {total_tests} {pass_percent}</p>'
-
 # Post a message on the pull request
 try:
     pull_request.create_issue_comment(messageBody)
