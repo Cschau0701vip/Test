@@ -27,7 +27,7 @@ num_failed = 0
 num_others = 0
 pass_percentage = 100
 test_not_reported = 0
-time_duration = 16m \\ 9s
+time_duration = '16m \\ 9s'
 
 messageBody = f'## UI Tests Summary\n\n'
 messageBody += f'**{total_runs}** Run(s) Completed (${{\color{{green}} {pass_runs} \ Passed}}$, ${{\color{{red}}{fail_runs} \ Failed}}$)\n\n'
