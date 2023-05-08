@@ -13,5 +13,5 @@ jobs:
     - name: Publis-Tests
       uses: Cschau0701vip/Publis-Tests@main
       with:
-        artifacts_path: './'
+        artifacts_path: './*.xml'
     
