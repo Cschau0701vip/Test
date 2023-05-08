@@ -18,19 +18,25 @@ pull_request_number = int(os.environ['PR_NUMBER'])
 pull_request = repo.get_pull(pull_request_number)
 
 # Construct the comment message
+total_runs = 1
+pass_runs = 1
+fail_runs = 0
 num_tests = 16
 num_passed = 16
 num_failed = 0
+num_others = 0
 pass_percentage = 100
+test_not_reported = 0
+time_duration = 16m \\ 9s
 
 messageBody = f'## UI Tests Summary\n\n'
-messageBody += f'**1** Run(s) Completed (${{\color{{green}}1 \ Passed}}$, ${{\color{{red}}0 \ Failed}}$)\n\n'
+messageBody += f'**{total_runs}** Run(s) Completed (${{\color{{green}} {pass_runs} \ Passed}}$, ${{\color{{red}}{fail_runs} \ Failed}}$)\n\n'
 messageBody += f'| Total tests | ✅ Passed | ❌ Failed | 🗃️ Others |\n'
 messageBody += f'| -----------| ------ | ------ | ------ |\n'
-messageBody += f'| $${{\color{{green}}{num_tests}}}$$        |  $${{\color{{green}}{num_passed}}}$$  | $${{\color{{red}} {num_failed}}}$$     | $${{\color{{green}}0}}$$      |\n\n'
+messageBody += f'| $${{\color{{black}}{num_tests}}}$$        |  $${{\color{{green}}{num_passed}}}$$  | $${{\color{{red}} {num_failed}}}$$     | $${{\color{{purple}}{num_others}}}$$      |\n\n'
 messageBody += f'✅ Pass percentage: ${{\color{{green}}{pass_percentage} ﹪}}$\n\n'
-messageBody += f'⏱️ Run duration: ${{\color{{black}} 16m \\ 9s}}$\n\n'
-messageBody += f'👾 Tests not reported:  ${{\color{{purple}} 0 }}$'
+messageBody += f'⏱️ Run duration: ${{\color{{black}} {time_duration} }}$\n\n'
+messageBody += f'👾 Tests not reported:  ${{\color{{purple}} {test_not_reported} }}$'
 
 # Post a message on the pull request
 try:
