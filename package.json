@@ -1,0 +1,28 @@
+{
+  "name": "github-actions-chartjs",
+  "version": "1.0.0",
+  "description": "A GitHub Actions workflow that generates a pie chart using Chart.js and attaches it to a pull request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cschau0701vip/Test.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "chartjs",
+    "pull-request"
+  ],
+  "author": "Cschau0701vip",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^5.1.1",
+    "chart.js": "^2.7.3",
+    "chartjs-node-canvas": "^2.1.1",
+    "fs": "0.0.1-security"
+  }
+}

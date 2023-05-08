@@ -1,6 +1,8 @@
 name: Publis-Tests
 
-on: [push]
+on: 
+  - workflow_dispatch
+  - push
 
 jobs:
   generate_chart:
@@ -14,4 +16,4 @@ jobs:
       uses: Cschau0701vip/Publis-Tests@main
       with:
         artifacts_path: './*.xml'
-    
+        
