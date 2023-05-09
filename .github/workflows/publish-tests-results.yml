@@ -5,6 +5,9 @@ on: pull_request
 jobs:
   generate_chart:
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      pull-requests: write
 
     steps:
     - name: Checkout code
