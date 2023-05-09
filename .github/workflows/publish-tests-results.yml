@@ -13,18 +13,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       
-    - name: Publish UI Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v2
-      with:
-        files: './results/**/*TEST-*.xml'
-        check_name: Android UI Test Results
-        comment_title: Bitbar UI Test Results Summary
+   # - name: Publish UI Test Results
+    #  uses: EnricoMi/publish-unit-test-result-action@v2
+     # with:
+      #  files: './results/**/*TEST-*.xml'
+       # check_name: Android UI Test Results
+        #comment_title: Bitbar UI Test Results Summary
 
-   # - name: Publis-Tests
-    #  uses: Cschau0701vip/Publis-Tests@main
-    #  with:
-    #    artifacts_path: './results/**/*TEST-*.xml'
-    #    pull_request_number: ${{ github.event.number }}
-    #    gh_token: ${{ secrets.GH_TOKEN }}
-    #    gh_repo: ${{ github.repository }}
+    - name: Publis-Tests
+      uses: Cschau0701vip/Publis-Tests@main
+      with:
+        artifacts_path: './results/**/*TEST-*.xml'
+        pull_request_number: ${{ github.event.number }}
+        gh_token: ${{ secrets.GH_TOKEN }}
+        gh_repo: ${{ github.repository }}
         
