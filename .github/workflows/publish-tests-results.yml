@@ -3,7 +3,7 @@ name: Publis-Tests
 on: pull_request
 
 jobs:
-  generate_chart:
+  publish_message:
     runs-on: ubuntu-latest
     permissions:
       checks: write
