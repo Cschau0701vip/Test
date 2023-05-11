@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuites>
+    <testsuite failures="0" name="AppraisalSearch" package="com.vauto.vadroid.buildVerificationTest"
+        skipped="0" tests="1" time="321.9000" timestamp="Fri May 05 13:20:18 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.AppraisalSearch"
+            name="testAppraisalSearch" time="321.9000" />
+    </testsuite>
+    <testsuite failures="0" name="AppraisalVinInfo"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="1" time="50.2720"
+        timestamp="Fri May 05 13:21:08 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.AppraisalVinInfo"
+            name="appraisalVinInfo" time="50.2720" />
+    </testsuite>
+    <testsuite failures="0" name="CreateAppraisalByYMMTest"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="1" time="28.6330"
+        timestamp="Fri May 05 13:21:37 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.CreateAppraisalByYMMTest"
+            name="testCreateAppraisalByYMM" time="28.6330" />
+    </testsuite>
+    <testsuite failures="0" name="CreateAppraisalFromYMMandVINKeyBoard"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="2" time="101.1040"
+        timestamp="Fri May 05 13:23:18 UTC 2023">
+        <testcase
+            classname="com.vauto.vadroid.buildVerificationTest.CreateAppraisalFromYMMandVINKeyBoard"
+            name="testCreateAppraisalByYMM" time="55.9750" />
+        <testcase
+            classname="com.vauto.vadroid.buildVerificationTest.CreateAppraisalFromYMMandVINKeyBoard"
+            name="testCreateAppraisalByVinKeyBoard" time="45.1290" />
+    </testsuite>
+    <testsuite failures="0" name="OdometerTest" package="com.vauto.vadroid.buildVerificationTest"
+        skipped="0" tests="1" time="59.2250" timestamp="Fri May 05 13:24:18 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.OdometerTest"
+            name="testOdometerPricing" time="59.2250" />
+    </testsuite>
+    <testsuite failures="0" name="RecentItemTest" package="com.vauto.vadroid.buildVerificationTest"
+        skipped="0" tests="3" time="166.5160" timestamp="Fri May 05 13:27:05 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.RecentItemTest"
+            name="testRecentItemPinnedAndUnpinnedFunc" time="49.5210" />
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.RecentItemTest"
+            name="testRecentItemInPricingAndVehicle" time="53.0220" />
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.RecentItemTest"
+            name="testRecentItems" time="63.9730" />
+    </testsuite>
+    <testsuite failures="0" name="TestProfitTime" package="com.vauto.vadroid.buildVerificationTest"
+        skipped="0" tests="3" time="139.3470" timestamp="Fri May 05 13:29:25 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.TestProfitTime"
+            name="testProfit_time_Appraisal_VDP" time="42.4120" />
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.TestProfitTime"
+            name="testProfit_time_onYMM_Screen" time="45.5440" />
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.TestProfitTime"
+            name="testProfit_time_Inventory_VDP" time="51.3910" />
+    </testsuite>
+    <testsuite failures="0" name="TestVINKeyboardTest"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="1" time="39.7980"
+        timestamp="Fri May 05 13:30:05 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.TestVINKeyboardTest"
+            name="testVinKeyboard" time="39.7980" />
+    </testsuite>
+    <testsuite failures="0" name="TestVINScannerOpens"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="1" time="36.4520"
+        timestamp="Fri May 05 13:30:41 UTC 2023">
+        <testcase classname="com.vauto.vadroid.buildVerificationTest.TestVINScannerOpens"
+            name="testVinScanOpens" time="36.4520" />
+    </testsuite>
+    <testsuite failures="0" name="TestVinKeyBoardThroughVinScanner"
+        package="com.vauto.vadroid.buildVerificationTest" skipped="0" tests="1" time="54.7410"
+        timestamp="Fri May 05 13:31:36 UTC 2023">
+        <testcase
+            classname="com.vauto.vadroid.buildVerificationTest.TestVinKeyBoardThroughVinScanner"
+            name="testVinKeyBoardThroughVinScanner" time="54.7410" />
+    </testsuite>
+    <testsuite failures="0" name="CompetitiveSetVehiclesDaoTest" package="com.vauto.vadroid.db.dao"
+        skipped="0" tests="1" time="0.0000" timestamp="Fri May 05 13:31:37 UTC 2023">
+        <testcase classname="com.vauto.vadroid.db.dao.CompetitiveSetVehiclesDaoTest"
+            name="testNonExistingData" time="0.0000" />
+    </testsuite>
+    <properties>
+        <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
+        <property name="java.specification.version" value="11" />
+        <property name="sun.cpu.isalist" value="" />
+        <property name="sun.jnu.encoding" value="ANSI_X3.4-1968" />
+        <property name="java.class.path" value="/test/device-tools.jar" />
+        <property name="java.vm.vendor" value="Ubuntu" />
+        <property name="sun.arch.data.model" value="64" />
+        <property name="java.vendor.url" value="https://ubuntu.com/" />
+        <property name="user.timezone" value="Etc/UTC" />
+        <property name="os.name" value="Linux" />
+        <property name="java.vm.specification.version" value="11" />
+        <property name="sun.java.launcher" value="SUN_STANDARD" />
+        <property name="user.country" value="US" />
+        <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib" />
+        <property name="sun.java.command"
+            value="com.bitbar.testdroid.tools.module.frameworks.AndroidInstrumentation -s R5CRA27PS9A --package=com.vauto.provision.test --runner=androidx.test.runner.AndroidJUnitRunner --test-package= --test-classes= --with-annotations=com.vauto.vadroid.annotations.CriticalWorkFlow --without-annotations=null --extra-params={} --output=TEST-all.xml" />
+        <property name="jdk.debug" value="release" />
+        <property name="sun.cpu.endian" value="little" />
+        <property name="user.home" value="/root" />
+        <property name="user.language" value="en" />
+        <property name="java.specification.vendor" value="Oracle Corporation" />
+        <property name="java.version.date" value="2022-10-18" />
+        <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64" />
+        <property name="file.separator" value="/" />
+        <property name="java.vm.compressedOopsMode" value="Zero based" />
+        <property name="line.separator" value="&#10;" />
+        <property name="java.specification.name" value="Java Platform API Specification" />
+        <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+        <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+        <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+        <property name="java.runtime.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04" />
+        <property name="user.name" value="root" />
+        <property name="path.separator" value=":" />
+        <property name="os.version" value="5.4.0-139-generic" />
+        <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+        <property name="file.encoding" value="ANSI_X3.4-1968" />
+        <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+        <property name="java.vendor.url.bug"
+            value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts" />
+        <property name="java.io.tmpdir" value="/tmp" />
+        <property name="java.version" value="11.0.17" />
+        <property name="user.dir" value="/test" />
+        <property name="os.arch" value="amd64" />
+        <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+        <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+        <property name="sun.os.patch.level" value="unknown" />
+        <property name="java.library.path"
+            value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib" />
+        <property name="java.vm.info" value="mixed mode, sharing" />
+        <property name="java.vendor" value="Ubuntu" />
+        <property name="java.vm.version" value="11.0.17+8-post-Ubuntu-1ubuntu222.04" />
+        <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+        <property name="java.class.version" value="55.0" />
+        <property name="ro.product.model" value="SM-G998U1" />
+        <property name="ro.build.fingerprint"
+            value="samsung/p3quew/p3q:12/SP1A.210812.016/G998U1UES5BVC1:user/release-keys" />
+        <property name="ro.product.manufacturer" value="samsung" />
+        <property name="ro.build.version.sdk" value="31" />
+        <property name="ro.build.version.release" value="12" />
+        <property name="ro.product.cpu.abi" value="arm64-v8a" />
+    </properties>
+</testsuites>
