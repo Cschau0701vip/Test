@@ -1,0 +1,26 @@
+name: Post Message on Pull Request
+
+on:
+  pull_request
+
+jobs:
+  post_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install PyGithub
+        run: pip install PyGithub
+      
+      - name: Post Message on Pull Request
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          python post_message.py
